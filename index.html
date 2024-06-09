@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Pizza Order Form</h1>
+    </header>
+
+    <main>
+        <form action="/submit-order" method="POST">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required><br><br>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea><br><br>
+            </fieldset>
+
+            <!-- Pizza Details -->
+            <fieldset>
+                <legend>Pizza Details</legend>
+                <label for="number-of-pizzas">Number of Pizzas:</label>
+                <input type="number" id="number-of-pizzas" name="number_of_pizzas" min="1" max="10" required><br><br>
+                
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="small">Small (6 slices)</option>
+                    <option value="medium">Medium (8 slices)</option>
+                    <option value="large">Large (12 slices)</option>
+                </select><br><br>
+                
+                <label>Shape:</label>
+                <input type="radio" id="shape-round" name="shape" value="round" required>
+                <label for="shape-round">Round</label>
+                <input type="radio" id="shape-square" name="shape" value="square">
+                <label for="shape-square">Square</label><br><br>
+                
+                <label>Crust Type:</label>
+                <input type="radio" id="crust-thin" name="crust" value="thin" required>
+                <label for="crust-thin">Thin Crust</label>
+                <input type="radio" id="crust-deep" name="crust" value="deep">
+                <label for="crust-deep">Deep Dish</label>
+                <input type="radio" id="crust-regular" name="crust" value="regular">
+                <label for="crust-regular">Regular Crust</label><br><br>
+                
+                <label>Toppings:</label><br>
+                <input type="checkbox" id="topping-pepperoni" name="toppings" value="pepperoni">
+                <label for="topping-pepperoni">Pepperoni</label>
+                <input type="checkbox" id="topping-mushrooms" name="toppings" value="mushrooms">
+                <label for="topping-mushrooms">Mushrooms</label>
+                <input type="checkbox" id="topping-onions" name="toppings" value="onions">
+                <label for="topping-onions">Onions</label>
+                <input type="checkbox" id="topping-sausage" name="toppings" value="sausage">
+                <label for="topping-sausage">Sausage</label>
+                <input type="checkbox" id="topping-bacon" name="toppings" value="bacon">
+                <label for="topping-bacon">Bacon</label>
+                <input type="checkbox" id="topping-extra-cheese" name="toppings" value="extra_cheese">
+                <label for="topping-extra-cheese">Extra Cheese</label><br><br>
+            </fieldset>
+
+            <!-- Order Type -->
+            <fieldset>
+                <legend>Order Type</legend>
+                <input type="radio" id="order-takeout" name="order_type" value="takeout" required>
+                <label for="order-takeout">Takeout</label>
+                <input type="radio" id="order-delivery" name="order_type" value="delivery">
+                <label for="order-delivery">Delivery</label>
+                <input type="radio" id="order-eatin" name="order_type" value="eatin">
+                <label for="order-eatin">Eat-in</label><br><br>
+            </fieldset>
+
+            <!-- Submit and Reset -->
+            <input type="submit" value="Order Now">
+            <input type="reset" value="Reset Form"><br><br>
+
+            <!-- Image -->
+            <p>Enjoy your delicious pizza!</p>
+            <img src="pizzatime.gif" alt="A delicious pizza" width="100">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Place. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
